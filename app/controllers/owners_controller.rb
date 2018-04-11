@@ -6,14 +6,14 @@ class OwnersController < ApplicationController
   end
 
   get '/owners/new' do
-    @pets = Pets.all 
+    @pets = Pets.all
     erb :'/owners/new'
   end
 
   post '/owners' do
 
   end
-
+binding.pry 
   get '/owners/:id/edit' do
     @owner = Owner.find(params[:id])
     erb :'/owners/edit'
